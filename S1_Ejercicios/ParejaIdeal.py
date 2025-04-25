@@ -31,20 +31,12 @@ for i in range(9):
                 elif preguntas[i].lower == 'no':
                     puntaje -= 10
             else:
-                puntaje += 5
+                puntaje += 5   
         elif preguntas[i].lower() == 'no':
             puntaje -= 10
         else:
             print("Lo siento la respuesta es invalida")
         break
-    else:
-        print("ERROR la respuesta debe ser una de las opciones indicadas")
-        print("responde de nuevo la pregunta ",i)
-        i -= 1
-        str(input(" "))
-        break
-    
-
 if puntaje >= 80:
     print("\nEres ideal")
 elif puntaje > 50 and puntaje < 80:
