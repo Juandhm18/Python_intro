@@ -1,0 +1,73 @@
+#Crea un programa que recomiende una película basada en la edad del usuario y sus preferencias (acción, comedia, terror, etc.).
+#👉 Si el usuario es menor de 13 años, evita películas con clasificación para adultos.
+print("\n---SISTEMA QUE RECOMIENDA PELICULAS---\n")
+edad = int(input("Cuantos años tienes?"))
+print("Que prefieres ver hoy? ")
+print("             1. Accion")
+print("             2. Comedia")
+print("             3. Terror")
+print("             4. Romance")
+print("             5. Drama")
+print("             6. Caricaturas")
+print("             7. Aventuras")
+opcion = int(input("\nElegi el numero segun tu preferencia: "))
+match opcion :
+    case 1:
+        print("Aqui tienes una lista de recomendaciones de peliculas de accion\n")
+        print("1. Ciudad de Dios")
+        print("2. El señor de los anillos: El retorno del rey")
+        print("3. John Wick")
+        print("4. Batman: El caballero de la noche")
+        print("5. Gladiador")
+    case 2:
+        print("Aqui tienes una lista de recomendaciones de peliculas de Comedia\n")
+        print("1. Que paso ayer?")
+        print("2. Scary movie")
+        print("3. Proyecto X")
+        print("4. Paul")
+        print("5. Y donde esta el fantasma?")
+    case 3:
+        print("Aqui tienes una lista de recomendaciones de peliculas de terror\n")
+        if edad < 15:
+            print("\nAqui tienes las mejores peliculas de terror para ti.\n")
+            print("1. Coraline y la puerta secreta")
+            print("2. El extraño mundo de Jack")
+            print("3. Monster house - La casa de los sustos")
+            print("4. Donde viven los monstruos")
+            print("5. ParaNorman")
+        else:
+            print("\nAqui tienes las mejores peliculas de terror para ti.\n")
+            print("1. El conjuro")
+            print("2. La bruja de Blair")
+            print("3. It")
+            print("4. SAW")
+            print("5. Anabelle")
+    case 4:
+        print("Aqui tienes una lista de recomendaciones de peliculas de romance\n")
+        print("1. Yo antes de ti")
+        print("2. Diario de una pasion")
+        print("3. La La Land: ciudad de sueños")
+        print("4. Vidas pasadas")
+        print("5. Cuestion de tiempo")
+    case 5:
+        print("Aqui tienes una lista de recomendaciones de peliculas de drama\n")
+        print("1. La vida es bella")
+        print("2. Sueño de fuga")
+        print("3. Buenos muchachos")
+        print("4. Forrest gump")
+        print("5. Parasitos")
+    case 6:
+        print("Aqui tienes una lista de recomendaciones de peliculas de caricaturas\n")
+        print("1. Shrek")
+        print("2. Como entrenar a tu dragon")
+        print("3. Cars")
+        print("4. Toy Story")
+        print("5. Coco")
+    case 7:
+        print("Aqui tienes una lista de recomendaciones de peliculas de aventuras\n")
+        print("1. Avatar")
+        print("2. Piratas del caribe")
+        print("3. La momia")
+        print("4. Jurasic Park")
+        print("5. Buscando a Nemo")    
+        
