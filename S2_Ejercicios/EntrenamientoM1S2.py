@@ -5,10 +5,9 @@
     #     Calcular y mostrar el promedio de las calificaciones en la lista
     #     Preguntar al usuario por un valor específico
     #     Contar cuántas calificaciones en la lista son mayores que este valor
-    #   Verificar y contar calificaciones específicas:
-    #         Preguntar al usuario por una calificación específica. 
-    #       Verificar si esta calificación está en la lista y contar cuántas veces aparece, utilizando break y continue para controlar el flujo del programa.
-
+    #     Verificar y contar calificaciones específicas:
+    #     Preguntar al usuario por una calificación específica. 
+    #     Verificar si esta calificación está en la lista y contar cuántas veces aparece, utilizando break y continue para controlar el flujo del programa.
 # Determinar el estado de aprobación:
 nota = int(input("Ingresa una calificacion numerica valida entre 0 - 100\n"))
 #ciclo while para validar que le numero ingresado este dentro del rango
