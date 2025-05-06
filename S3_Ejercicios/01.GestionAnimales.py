@@ -23,11 +23,11 @@ def eliminar():
                 
 def mostrar():
     for i in range (len(nombre)):
-        print(i,". Nombre:",nombre[i],"- edad:",edad[i]," - estado de salud:",enfermo[i])
+        print(f"{i+1}",". Nombre:",nombre[i],"| edad:",edad[i]," | estado de salud:",enfermo[i])
     
 while True:
     try:
-        print("\n-----GESTION DE ANIMALES-----")
+        print("\n-----\033[33mGESTION DE ANIMALES\033[0m-----")
         print("         1. Agregar un animal nuevo")
         print("         2. Eliminar un animal por su nombre")
         print("         3. Mostrar lista de animales")

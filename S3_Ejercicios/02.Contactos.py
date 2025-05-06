@@ -1,25 +1,32 @@
-contactos = [{"nombre":"Jesus","numero":3125468520},
-             {"nombre":"Juan","numero":3264658945},
-             {"nombre":"Santiago","numero":3654258963}
-]
+contactos = {
+    "jesus": 3125468520,
+    "juan": 3264658945,
+    "santiago": 3654258963
+}
 def agregar():
     nombre = input("Ingresa el nombre del nuevo contacto: ")
-    numero = int(input(f"Ingresa el número de {nombre}: "))
-    nuevo_contacto = {'nombre': nombre, 'numero': numero}
-    contactos.append(nuevo_contacto)
-
+    while True:
+        numero = input(f"Ingresa el número de {nombre}: ").strip()
+        if numero.isdigit():
+            contactos[nombre] = numero
+            print("Contacto agregado exitosamente.")
+            break
+        else:
+            print("Número inválido. Inténtalo de nuevo.")
+            
 def mostrar():
-    for idx, i in enumerate(contactos):
-        print(f"{idx}->",i['nombre'],"#",i['numero'])
+    print("\nLista de contactos:")
+    for idx, (nombre, numero) in enumerate(contactos.items(), 1):
+        print(f"{idx}-> {nombre.capitalize()} #{numero}")
         
 def buscar():
-    buscar = input("Ingrese el nombre del contacto: ")
-    if buscar in contactos['nombre']:
-            i = contactos.index(buscar)
-            print(contactos[i]['nombre']['numero'])
+    buscar = input("Ingrese el nombre del contacto: ").strip().lower()
+    if buscar in contactos:
+        print(f"Número de {buscar.capitalize()}: {contactos[buscar]}")
     else:
-        print("El nombre de ese contacto no existe")
-        
+        print("El nombre de ese contacto no existe.")
+            
+       
 while True:
     try:
         print("\n     -----DIRECTORIO-----\n")
