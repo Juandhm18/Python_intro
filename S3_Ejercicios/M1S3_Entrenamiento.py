@@ -2,23 +2,30 @@ productos = {"papa":{"precio":2500,"cantidad":50}}
 
 def agregar(articulo, precio, cantidad):
     productos[articulo] = {"precio": precio, "cantidad":cantidad}
+    
+def buscar(consul):
+    if consul in productos:
+        for articulo, datos in productos.items():
+            print(f"{articulo}: ${datos['precio']} | cantidad {datos['cantidad']}")
+    else:
+        print("Este articulo no existe")
 
-# def editar(nombre, nueva_nota):
-#     if nombre in estudiantes:
-#         estudiantes[nombre]["nota"] = nueva_nota
-#         print(f"Nota actualizada para {nombre}: {estudiantes[nombre]['nota']}")
-#     else:
-#         print("El estudiante no existe.")
+def editar(consul, precio):
+    if consul in productos:
+        productos[consul]["precio"] = precio
+        print(f"precio actualizado para {consul}: {productos[consul]['precio']}")
+    else:
+        print("El producto no existe.")
 
-# def eliminar(nombre):
-#     if nombre in estudiantes:
-#         del estudiantes[nombre]
-#     else:
-#         print("El estudiante no existe.")
+def eliminar(consul):
+    if consul in productos:
+        del productos[consul]
+    else:
+        print("El producto no existe, por lo cual no se puede eliminar")
         
-# def mostrar():
-#     for nombre, datos in estudiantes.items():
-#         print(f"{nombre}: Edad {datos['edad']} | Nota {datos['nota']}")
+def total():
+    for nombre, datos in productos.items():
+        print(f"{nombre}: Edad {datos['edad']} | Nota {datos['nota']}")
         
 while True:
     try:
@@ -34,15 +41,18 @@ while True:
             case 1:
                 articulo = input("Ingrese el nombre del articulo: ")
                 precio = float(input("Ingrese el valor PU de el articulo: "))
-                cantidad = int(input("Cuantos lleva? "))
+                cantidad = int(input("Cantidad disponible "))
                 agregar(articulo, precio, cantidad)
             case 2:
-                
-                editar(nombre, nueva_nota)
+                consul = input("Ingrese el nombre del contacto: ").strip().lower()
+                buscar(consul)
             case 3:
-                mostrar()
+                consul = input("Ingrese el articulo a editar: ")
+                precio = float(input("Ingrese el nuevo precio: "))
+                editar(consul, precio)
             case 4:
-                eliminar(nombre)
+                consul = input("Ingrese el articulo a eliminar: ")
+                eliminar(consul)
             case 5:
                 total()
             case 6:
