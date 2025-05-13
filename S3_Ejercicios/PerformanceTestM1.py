@@ -7,7 +7,7 @@ inventory = [
     {"product": "carrot", "price": 5.0, "quantity": 50}
 ]
 #function that validates if a new product is already in the inventory and returns True or False
-def existing_product():
+def existing_product(product):
     while True:
         found = False
         for i in inventory:
@@ -130,7 +130,7 @@ while True:
         match option:
             case "1":
                 product = input("Please indicate the product name: ").lower()
-                new_product = existing_product()
+                new_product = existing_product(product)
                 #line to validate if a new product is already in the inventory
                 if new_product != True: #If the item does not exist, it will be added
                     price = request_price()
