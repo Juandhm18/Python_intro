@@ -114,4 +114,4 @@ while True:
                 print("\033[35mClosing...\033[0m")
                 break
             case _:
-                print("The option is not eligible or doesn't exist, please try again\n")           
+                print("The option is not eligible or doesn't exist, please try again\n")          
